@@ -1,0 +1,65 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Sebastian",
+      "sobrenome": "Eschweiler",
+      "username": "sebastian",
+      "email": "sebastian@codingthesmartway.com",
+      "password": "1234",
+      "token": "12345678910"
+    },
+    {
+      "id": 2,
+      "name": "Steve",
+      "sobrenome": "Palmer",
+      "username": "steve",
+      "email": "steve@codingthesmartway.com",
+      "password": "12345",
+      "token": "12345678911"
+    },
+    {
+      "name": "Matheus",
+      "sobrenome": "Rodrigues",
+      "username": "matheusrp97",
+      "email": "testes@gmail.com",
+      "password": "12345",
+      "token": "84879052168",
+      "id": 3
+    },
+    {
+      "name": "Matheus2",
+      "sobrenome": "rodri",
+      "username": "matheu",
+      "email": "matheusdraper@gmail.com",
+      "password": "1234",
+      "token": "89598474068",
+      "id": 4
+    },
+    {
+      "name": "joão",
+      "sobrenome": "pedro",
+      "username": "jojo",
+      "email": "jojo@gmail.com",
+      "password": "1234",
+      "token": "82572753849",
+      "id": 5
+    },
+    {
+      "name": "Raphael",
+      "sobrenome": "rafa",
+      "username": "rafa",
+      "email": "rafa@gmail.com",
+      "password": "1234",
+      "token": "647557732",
+      "id": 6
+    }
+  ],
+  "category": [
+    "game",
+    "music",
+    "show",
+    "dance",
+    "series"
+  ]
+}
