@@ -4,6 +4,9 @@ import {
   getUserCategories,
 } from "../../api/updateCategories";
 
+import { changeLoading } from "./loadginActi";
+import { changeNotify } from ".//notifyAct";
+
 export const actionTypes = {
   GET_CATEGORIES: "GET_CATEGORIES",
   GET_USER_CATEGORIES: "GET_USER_CATEGORIES",
@@ -57,9 +60,21 @@ export const registerCategories = (data) => {
 
 export const getCategories = (data) => {
   return async (dispatch) => {
+    dispatch(
+      changeLoading({
+        open: true,
+        message: "Categorias",
+      })
+    );
     try {
       const categories = await getApiCategories(data);
       dispatch(getSuccessCategories(categories));
+      dispatch(
+        changeLoading({
+          open: false,
+          message: "",
+        })
+      );
       return categories;
     } catch (error) {
       console.log(error);
@@ -73,9 +88,21 @@ export const getUserInterests = (data) => {
     id: data,
   };
   return async (dispatch) => {
+    dispatch(
+      changeLoading({
+        open: true,
+        message: "Categorias",
+      })
+    );
     try {
       const userInterests = await getUserCategories(payloadData);
       dispatch(getSuccessUserCategories(userInterests));
+      dispatch(
+        changeLoading({
+          open: false,
+          message: "",
+        })
+      );
       return userInterests;
     } catch (error) {
       console.log(error);

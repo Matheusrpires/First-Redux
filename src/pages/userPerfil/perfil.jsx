@@ -8,6 +8,8 @@ import {
   Header,
   UserPicture,
   OverflowOptions,
+  Loading,
+  Notify,
 } from "../../components/index";
 
 import { Sbackground } from "./styles";
@@ -17,24 +19,29 @@ const UserPerfil = (props) => {
     // authReducer.id.toString(),
     const getInt = async () => {
       try {
-        const getUserCategoriesInterest = await props.getUserInterests(props.data.authReducer.id.toString());
+        const getUserCategoriesInterest = await props.getUserInterests(
+          props.data.authReducer.id.toString()
+        );
         return getUserCategoriesInterest;
       } catch (error) {
-        console.log(error)
+        console.log(error);
       }
-    }
+    };
     getInt();
   }, []);
 
   return (
     <>
-      <Header userName={props.data.authReducer.userName} />
+      <Loading />
+      <Notify />
       <Sbackground></Sbackground>
+      <Header userName={props.data.authReducer.userName} />
       <UserPicture span="true" />
       <WhiteMessage size="20px" height="22px">
         Seus Interesses
       </WhiteMessage>
-      <OverflowOptions hideClose='true'
+      <OverflowOptions
+        hideClose="true"
         userInterests={props.data.updateCategoriesReducer.userCatefories}
       />
     </>

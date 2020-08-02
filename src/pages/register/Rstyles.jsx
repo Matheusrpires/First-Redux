@@ -20,10 +20,10 @@ const SDiv = styled.div`
     text-transform: uppercase;
     text-decoration: none;
   }
-  /* @media (max-width: 411px) {
-    width: 80%;
+  @media (max-width: 414px) {
+    width: 70%;
     margin: auto;
-  } */
+  }
   @media (min-width: 616px) {
     padding: 10% 7% 0 7%;
     width: 45%;

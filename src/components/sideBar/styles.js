@@ -28,7 +28,7 @@ const Sdiv = styled.div`
 `;
 
 const Sbar = styled.div`
-  height: 92.7%;
+  height: 100vh;
   width: ${(props) => (props.state ? "65%" : "0")};
   position: fixed;
   z-index: 1;
@@ -36,7 +36,7 @@ const Sbar = styled.div`
   left: 0;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 60px;
+  padding-top: 0;
   position: absolute;
   top: 0;
   right: 25px;
@@ -57,6 +57,9 @@ const Sbar = styled.div`
     line-height: 24px;
     color: #ffffff;
   }
+  @media (min-width: 1024px) {
+    width: ${(props) => (props.state ? "25%" : "0")};
+  }
 `;
 
 const Ssidea = styled.a`
@@ -73,4 +76,11 @@ const SHrLine = styled.hr`
   margin: 0% 0;
 `;
 
-export { Sdiv, Sbar, Ssidea, SHrLine };
+const SsideMenuContainer = styled.div`
+  padding: 4% 0;
+  @media (min-width: 1024px) {
+    padding: 2% 0;
+  }
+`;
+
+export { Sdiv, Sbar, Ssidea, SHrLine, SsideMenuContainer };

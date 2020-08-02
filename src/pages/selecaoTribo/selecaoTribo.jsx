@@ -9,7 +9,13 @@ import {
   removeCategories,
 } from "../../store/actions/updateCategoriesAct";
 
-import { TribosBtn, DropdownT, Dot } from "../../components/index";
+import {
+  TribosBtn,
+  DropdownT,
+  Dot,
+  Loading,
+  Notify,
+} from "../../components/index";
 
 import { Scontainer, ScontainerItem, Sfooter, SArroyDiv } from "./styles";
 
@@ -41,6 +47,8 @@ const SelectTribo = (props) => {
 
   return (
     <>
+      <Loading />
+      <Notify />
       <Scontainer>
         <DropdownT
           item={props.states.updateCategoriesReducer.defaultCategories}
@@ -49,15 +57,17 @@ const SelectTribo = (props) => {
         />
         <ScontainerItem>
           {props.states.updateCategoriesReducer.userCatefories &&
-            props.states.updateCategoriesReducer.userCatefories.map((categorie, key) => {
-              return (
-                <TribosBtn
-                  key={key}
-                  item={categorie}
-                  removeC={props.removeCategories}
-                />
-              );
-            })}
+            props.states.updateCategoriesReducer.userCatefories.map(
+              (categorie, key) => {
+                return (
+                  <TribosBtn
+                    key={key}
+                    item={categorie}
+                    removeC={props.removeCategories}
+                  />
+                );
+              }
+            )}
         </ScontainerItem>
         {/* <button onClick={handleCategories}>Teste redux</button> */}
       </Scontainer>

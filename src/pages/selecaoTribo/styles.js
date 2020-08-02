@@ -1,10 +1,13 @@
 import styled from "styled-components";
 
 const Scontainer = styled.div`
-  padding: 40% 5%;
+  padding: 36% 5%;
   /* backdrop-filter: blur(1px); */
   /* background-color: rgba(255, 255, 255, 0.2); */
   /* height: 100vw; */
+  @media (min-width: 768px) {
+    padding: 17% 5%;
+  }
 `;
 
 const ScontainerItem = styled.div`
@@ -15,6 +18,9 @@ const ScontainerItem = styled.div`
   scroll-behavior: auto;
   height: 400px;
   padding-top: 10%;
+  @media (min-width: 1024px) {
+    padding-top: 0%;
+  }
 `;
 
 const Sfooter = styled.footer`
@@ -35,8 +41,9 @@ const SArroyDiv = styled.div`
     /* padding: 35%; */
   }
   @media (min-width: 768px) {
+    padding: 1%;
     a {
-      padding: 50%;
+      /* padding: 50%; */
     }
   }
 `;

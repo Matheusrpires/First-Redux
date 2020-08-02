@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { Sdiv, Sbar, Ssidea, SHrLine } from "./styles";
+import { Sdiv, Sbar, Ssidea, SHrLine, SsideMenuContainer } from "./styles";
 
 import UserPicture from "../user/userPicture/userPicture";
 
@@ -12,12 +12,14 @@ const Sidebar = () => {
 
   return (
     <>
-      <Sdiv onClick={() => toggle()}></Sdiv>
+      <SsideMenuContainer onClick={() => toggle()}>
+        <Sdiv></Sdiv>
+      </SsideMenuContainer>
       <Sbar state={open && "true"}>
         <Ssidea href="javascript:void(0)" onClick={() => toggle()}>
           &times;
         </Ssidea>
-        <UserPicture />
+        <UserPicture status="sideBar"/>
         <SHrLine />
         <a href="#">Feed</a>
         <a href="#">Amigos</a>

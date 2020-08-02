@@ -91,7 +91,7 @@ hr {
 } */
 
 .loT {
-  font-family: 'Bebas Neue', cursive;
+  font-family: "Bebas Neue", cursive;
   font-style: normal;
   font-weight: normal;
   font-size: 19px;
@@ -160,3 +160,32 @@ hr {
   color: #9fa3b1;
 }
 
+@media (min-width: 768px) {
+  .search_box {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .teste {
+    width: 40%;
+    left: 24%;
+    padding: 3% 6% 3% 6%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .search_box {
+    width: 35%;
+    margin: 0 auto;
+  }
+  .teste {
+    width: 30%;
+    left: 29%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .search_box {
+    width: 32%;
+  }
+}

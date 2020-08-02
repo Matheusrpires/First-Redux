@@ -10,6 +10,14 @@ const Sbtn = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+  @media (min-width: 768px) {
+    width: 53%;
+    padding: 1% 0;
+    margin: 3% auto 0 auto;
+  }
+  @media (min-width: 1024px) {
+    width: 40%;
+  }
 `;
 
 const SuserImg = styled.img`
