@@ -17,7 +17,7 @@ Backend para cadastro está em outro repo e foi feito com [Strapi](https://strap
 ![Loading](./Readmepics/loading.png)
 ![user](./Readmepics/user.png)
 ![userMenu](./Readmepics/userMenu.png)
-
+ 
 ### `yarn start`
 
 Inicia a aplicação no localhost:3000.
