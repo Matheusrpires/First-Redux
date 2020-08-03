@@ -23,7 +23,7 @@ const Pregister = (props) => {
 
   const [result, setResult] = useState(vest.get("user_form"));
   const [formState, setFormState] = useState({});
-  const [statusBtn, setStatusBtn] = useState(false);
+  const [statusBtn, setStatusBtn] = useState(true);
 
   const runValidate = (name, value) => {
     const res = validate(

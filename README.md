@@ -1,4 +1,6 @@
-# Primeiro app com Redux (Desenvolvimento)
+# Primeiro app com Redux (Em Desenvolvimento)
+
+Aplicação responsiva.
 
 Projeto com login e cadastro de usuário.
 

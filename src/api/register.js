@@ -8,7 +8,7 @@ export const createUser = async (data) => {
     body: JSON.stringify(data),
   };
   try {
-    const response = await fetch(`http://localhost:1337/auth/local/register`, parameters);
+    const response = await fetch(`https://strapi-redux.herokuapp.com/auth/local/register`, parameters);
     console.log("console.log na api register response api", response);
     let data = await response.json();
     console.log("console.log na api register data dps api", data);

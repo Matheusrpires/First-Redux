@@ -21,7 +21,7 @@ const LoginP = (props) => {
   const [redi, setRedi] = useState(false);
   const [formState, setFormState] = useState({});
   const [result, setResult] = useState(vest.get("login_form"));
-  const [statusBtn, setStatusBtn] = useState(false);
+  const [statusBtn, setStatusBtn] = useState(true);
 
   const runValidate = (name, value) => {
     const res = validate(
@@ -54,7 +54,6 @@ const LoginP = (props) => {
       console.log("log no login react", log);
       if (log.jwt) {
         setRedi(true);
-        setStatusBtn(true);
       }
     } catch (error) {
       console.log("login no react login error", error);

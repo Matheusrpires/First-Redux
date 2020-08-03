@@ -14,7 +14,7 @@ export const loginApi = async (data) => {
   console.log(parameters);
   try {
     const response = await fetch(
-      `http://localhost:1337/auth/local`,
+      `https://strapi-redux.herokuapp.com/auth/local`,
       parameters
     );
     console.log(response);
