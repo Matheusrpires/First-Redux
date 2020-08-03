@@ -4,7 +4,7 @@ Aplicação responsiva.
 
 Projeto com login e cadastro de usuário.
 
-Backend para cadastro está em outro repo e foi feito com Strapi(CMS).
+Backend para cadastro está em outro repo e foi feito com [Strapi](https://strapi-redux.herokuapp.com/).
 
 ## Prints da Aplicação
 
