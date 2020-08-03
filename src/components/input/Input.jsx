@@ -1,8 +1,7 @@
-import React from "react";
-
+import React, { useState } from "react";
 import Label from "../label/label";
 
-import { SInput, SDiv } from "./styles";
+import { SInput, SDiv, SSpan } from "./styles";
 
 const handleFunc = (e, funci) => {
   if (funci) {
@@ -10,10 +9,20 @@ const handleFunc = (e, funci) => {
   }
 };
 
-const Input = ({ name, placeholder, type, value, func, color }) => {
+const Input = ({
+  name,
+  placeholder,
+  type,
+  value,
+  func,
+  color,
+  label,
+  errors = [],
+}) => {
   return (
     <SDiv>
-      <Label color={color}>{name}</Label>
+      <Label color={color}>{label}</Label>
+      {!!errors.length && <SSpan>{errors[0]}</SSpan>}
       <SInput
         name={name}
         placeholder={placeholder}

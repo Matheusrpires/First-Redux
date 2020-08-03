@@ -4,7 +4,8 @@ export default {
     id: "",
     userName: '',
     credentials: {
-      email: '',
+      // email: '',
+      username: '',
       password: ''
     }
   },

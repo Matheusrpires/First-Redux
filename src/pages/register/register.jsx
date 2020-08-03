@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { Redirect, Link } from "react-router-dom";
+import vest from "vest";
+
+import validate from "../../validation/validate";
 
 import { changesValue, registerUser } from "../../store/actions/registerAct";
 
@@ -18,14 +21,32 @@ import { SDiv, Sfooter, SdivBtn, Sform } from "./Rstyles";
 const Pregister = (props) => {
   const [redirect, setRedirect] = useState(false);
 
-  const handleLogin = (e) => {
+  const [result, setResult] = useState(vest.get("user_form"));
+  const [formState, setFormState] = useState({});
+  const [statusBtn, setStatusBtn] = useState(false);
+
+  const runValidate = (name, value) => {
+    const res = validate(
+      {
+        ...formState,
+        ...{ [name]: value },
+      },
+      name
+    );
+    setResult(res);
+  };
+
+  const handleLogin = async (e) => {
     e.preventDefault();
-    register();
+    runValidate();
+    statusBtn && register();
   };
 
   const handlesChange = (name, user) => {
     console.log(props.changesValue({ [name]: user }));
     props.changesValue({ [name]: user });
+    setFormState({ ...formState, [name]: user });
+    runValidate(name, user);
   };
 
   const register = async () => {
@@ -55,41 +76,60 @@ const Pregister = (props) => {
         >
           <Input
             name="name"
+            label="Nome"
             type="text"
             placeholder="Nome"
             func={handlesChange}
+            errors={result.getErrors("name")}
           />
           <Input
             name="sobrenome"
+            label="Sobrenome"
             type="text"
             placeholder="Sobrenome"
             func={handlesChange}
+            errors={result.getErrors("sobrenome")}
           />
           <Input
             name="username"
+            label="Usuário"
             type="text"
             placeholder="Username"
             func={handlesChange}
+            errors={result.getErrors("username")}
           />
           <Input
             name="email"
+            label="Email"
             type="text"
             placeholder="Email"
             func={handlesChange}
+            errors={result.getErrors("email")}
           />
           <Input
             name="password"
+            label="Senha"
             type="password"
             placeholder="Senha"
             func={handlesChange}
+            errors={result.getErrors("password")}
           />
           <Input
-            name="Digite a senha novamente"
+            name="confirm_password"
+            label="Digite a senha novamente"
             type="password"
             placeholder="Senha"
+            func={handlesChange}
+            errors={result.getErrors("confirm_password")}
           />
           <SdivBtn>
-            <Mainbtn margin="true" type="submit" width="48">
+            <Mainbtn
+              disabled={result.hasErrors()}
+              statusBtn={setStatusBtn}
+              margin="true"
+              type="submit"
+              width="48"
+            >
               Cadastrar
             </Mainbtn>
             {/* <Link to="">Voltar</Link> */}

@@ -24,4 +24,16 @@ const SDiv = styled.div`
   }
 `;
 
-export { SInput, SDiv };
+const SSpan = styled.span`
+color: red;
+    margin-bottom: 2%;
+    font-family: 'Poppins',sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+`
+
+export { SInput, SDiv, SSpan };

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { Redirect } from "react-router-dom";
+import vest from "vest";
+import validate from "../../validation/login";
 
 import {
   MainLogo,
@@ -19,14 +21,31 @@ import { loginUser, changeValue } from "../../store/actions/authentication";
 
 const LoginP = (props) => {
   const [redi, setRedi] = useState(false);
+  const [formState, setFormState] = useState({});
+  const [result, setResult] = useState(vest.get("login_form"));
+  const [statusBtn, setStatusBtn] = useState(false);
+
+  const runValidate = (name, value) => {
+    const res = validate(
+      {
+        ...formState,
+        ...{ [name]: value },
+      },
+      name
+    );
+    setResult(res);
+  };
 
   const handleLogin = (e) => {
     e.preventDefault();
-    login();
+    runValidate();
+    statusBtn && login();
   };
 
   const handleChange = (name, data) => {
     props.changeValue({ [name]: data });
+    setFormState({ ...formState, [name]: data });
+    runValidate(name, data);
   };
 
   const login = async () => {
@@ -53,22 +72,29 @@ const LoginP = (props) => {
         <MainLogo />
         <form onSubmit={handleLogin}>
           <Input
-            name="email"
+            name="username"
             type="text"
-            placeholder="Email"
+            placeholder="Username"
             func={handleChange}
-            color='true'
+            color="true"
             value={props.credentials.email}
+            errors={result.getErrors("username")}
           />
           <Input
             name="password"
             type="password"
             placeholder="Senha"
             func={handleChange}
-            color='true'
+            color="true"
             value={props.credentials.password}
+            errors={result.getErrors("password")}
           />
-          <Mainbtn type="submit" width="100">
+          <Mainbtn
+            disabled={result.hasErrors()}
+            statusBtn={setStatusBtn}
+            type="submit"
+            width="100"
+          >
             Login
           </Mainbtn>
         </form>
