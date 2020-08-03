@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
 import { Redirect } from "react-router-dom";
 import vest from "vest";
 import validate from "../../validation/login";
@@ -13,7 +12,6 @@ import {
   Loading,
   Notify,
 } from "../../components/index";
-import { requestApiData } from "../../redux/actions/index";
 
 import { SDiv, Sfooter } from "./Pstyles";
 
@@ -49,14 +47,14 @@ const LoginP = (props) => {
   };
 
   const login = async () => {
+    console.log("teste");
     const { credentials } = props;
     try {
       const log = await props.loginUser(credentials);
       console.log("log no login react", log);
       if (log.jwt) {
-        // window.location.replace("/Perfil");
-        // window.location.replace("/SelectTribo");
         setRedi(true);
+        setStatusBtn(true);
       }
     } catch (error) {
       console.log("login no react login error", error);

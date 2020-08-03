@@ -37,7 +37,7 @@ const SelectTribo = (props) => {
       categories: props.states.updateCategoriesReducer.userCatefories,
       user_id: props.states.authReducer.id.toString(),
     };
-    const teste = props.registerCategories(categories);
+    const selectTribe = props.registerCategories(categories);
     console.log(
       "log props state categories",
       props.states.updateCategoriesReducer.defaultCategories

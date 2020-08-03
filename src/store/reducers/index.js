@@ -1,6 +1,5 @@
 import { combineReducers } from "redux";
 
-import usersReducer from "./users";
 import authReducer from "./authenticationReducer";
 import registerReducer from "./registerReduc";
 import loadingRecuder from "./loadingReduc";

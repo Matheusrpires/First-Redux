@@ -16,7 +16,7 @@ const Sidebar = () => {
         <Sdiv></Sdiv>
       </SsideMenuContainer>
       <Sbar state={open && "true"}>
-        <Ssidea href="javascript:void(0)" onClick={() => toggle()}>
+        <Ssidea href="" onClick={() => toggle()}>
           &times;
         </Ssidea>
         <UserPicture status="sideBar"/>

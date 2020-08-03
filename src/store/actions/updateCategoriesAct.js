@@ -5,7 +5,6 @@ import {
 } from "../../api/updateCategories";
 
 import { changeLoading } from "./loadginActi";
-import { changeNotify } from ".//notifyAct";
 
 export const actionTypes = {
   GET_CATEGORIES: "GET_CATEGORIES",

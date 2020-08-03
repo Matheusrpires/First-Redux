@@ -2,12 +2,7 @@ import React, { Suspense, lazy } from "react";
 import { Switch, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 
-import {
-  CTribo,
-  SelectTribo,
-  UserPerfil,
-  TesteRedux,
-} from "./pages/index";
+import { CTribo, SelectTribo, UserPerfil } from "./pages/index";
 // import store from './redux/store';
 
 import { store } from "./store/store";
@@ -29,7 +24,6 @@ const App = () => {
             <Route exact path="/Tribo" component={CTribo} />
             <Route exact path="/SelectTribo" component={SelectTribo} />
             <Route exact path="/Perfil" component={UserPerfil} />
-            <Route exact path="/Teste" component={TesteRedux} />
           </Switch>
         </Suspense>
       </Provider>

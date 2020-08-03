@@ -1,11 +1,5 @@
 .App {
-  /* position: relative;
-  min-height: 100vh;
-  background-image: url(./images/background.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  z-index: -100; */
+
 }
 
 *::-webkit-scrollbar-thumb {
@@ -16,19 +10,10 @@
 }
 
 .App2 {
-  /* background:red; */
-  /* backdrop-filter: blur(2px);
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  z-index: -10; */
-
-  /* background: rgba(255, 255, 255, 0.2); */
   width: 100vw;
   height: 100vh;
   position: absolute;
   z-index: -27;
-  /* position: relative; */
   min-height: 100vh;
   background-image: url(./images/background.jpg);
   background-size: cover;
@@ -50,7 +35,6 @@ footer {
   height: 79px;
   margin: 20px;
   clip-path: circle();
-  /* clip-path: circle(50% at 0%) meio circulo*/
   background: linear-gradient(228.76deg, #2deef9 -34.42%, #e084f1 127.18%);
   position: absolute;
   top: 13%;
@@ -74,8 +58,6 @@ footer {
   float: left;
   width: 150px;
   height: 150px;
-  /* clip-path: circle(50% at 22%); */
-  /* -webkit-clip-path: circle(100% at 50% 50%); */
   clip-path: circle(100% at 100% 100%);
   transform: rotate(90deg);
   background: linear-gradient(

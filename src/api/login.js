@@ -1,7 +1,7 @@
 export const loginApi = async (data) => {
   console.log("console.log data antes de enviar para api", data);
   const payload = {
-    identifier: data.email,
+    identifier: data.username,
     password: data.password,
   };
   const parameters = {
