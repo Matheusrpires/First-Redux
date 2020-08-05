@@ -34,9 +34,6 @@ const SArroyDiv = styled.div`
   background: #e57728;
   border-radius: 25px;
 
-  a {
-    /* padding: 35%; */
-  }
   @media (min-width: 768px) {
     padding: 1%;
     border-radius: 38px;

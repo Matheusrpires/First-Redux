@@ -54,7 +54,6 @@ const Sform = styled.form`
     grid-template-columns: 20vw 20vw;
     grid-template-rows: 30% 30% 30%;
     grid-gap: 10%;
-    /* margin: 0% 20%; */
   }
 `;
 export { SDiv, Sfooter, SdivBtn, Sform };

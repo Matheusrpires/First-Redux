@@ -64,7 +64,6 @@ const SelectTribo = (props) => {
               }
             )}
         </ScontainerItem>
-        {/* <button onClick={handleCategories}>Teste redux</button> */}
       </Scontainer>
       <Sfooter>
         <Dot dot="1" />
