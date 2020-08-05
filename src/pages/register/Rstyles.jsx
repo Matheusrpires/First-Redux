@@ -32,6 +32,7 @@ const SDiv = styled.div`
   @media (min-width: 1024px) {
     width: 100%;
     padding: 10% 0 0 0;
+    text-align: center;
   }
 `;
 
@@ -50,10 +51,10 @@ const Sfooter = styled.footer`
 const Sform = styled.form`
   @media (min-width: 1024px) {
     display: inline-grid;
-    grid-template-columns: 100% 100%;
+    grid-template-columns: 20vw 20vw;
     grid-template-rows: 30% 30% 30%;
     grid-gap: 10%;
-    margin: 0% 20%;
+    /* margin: 0% 20%; */
   }
 `;
 export { SDiv, Sfooter, SdivBtn, Sform };

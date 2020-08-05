@@ -179,13 +179,14 @@ hr {
     margin: 0 auto;
   }
   .teste {
-    width: 30%;
-    left: 29%;
+    width: 20%;
+    left: 38%;
+    padding: 3% 2% 3% 2%;
   }
 }
 
 @media (min-width: 1440px) {
   .search_box {
-    width: 32%;
+    width: 22%;
   }
 }

@@ -38,11 +38,6 @@ const SelectTribo = (props) => {
       user_id: props.states.authReducer.id.toString(),
     };
     const selectTribe = props.registerCategories(categories);
-    console.log(
-      "log props state categories",
-      props.states.updateCategoriesReducer.defaultCategories
-    );
-    console.log("log props state categories", props.states.authReducer);
   };
 
   return (

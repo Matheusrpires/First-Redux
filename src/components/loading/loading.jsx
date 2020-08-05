@@ -9,7 +9,6 @@ const Loading = (props) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       handleClose();
-      console.log("loading", timer);
     }, 4000);
     return () => clearTimeout(timer);
   }, [props.loading.open]);

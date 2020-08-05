@@ -81,7 +81,6 @@ export const loginUser = (credentials) => {
         })
       );
       dispatch(setUserToken(api.jwt));
-      console.log('log no actions authentication id', api.user.id)
       const userNameId = {
         id: api.user.id,
         userName: api.user.username

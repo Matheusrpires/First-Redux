@@ -8,7 +8,7 @@ const SDiv = styled.div`
     margin: 0 auto;
   }
   @media (min-width: 1024px) {
-    width: 44%;
+    width: max(20vw, 600px);
   }
 `;
 

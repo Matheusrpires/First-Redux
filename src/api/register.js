@@ -1,5 +1,4 @@
 export const createUser = async (data) => {
-  console.log("console.log na api register data antes api", data);
   const parameters = {
     method: "POST",
     headers: {
@@ -9,9 +8,7 @@ export const createUser = async (data) => {
   };
   try {
     const response = await fetch(`https://strapi-redux.herokuapp.com/auth/local/register`, parameters);
-    console.log("console.log na api register response api", response);
     let data = await response.json();
-    console.log("console.log na api register data dps api", data);
     return data;
   } catch (error) {
     return error;

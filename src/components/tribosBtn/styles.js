@@ -16,7 +16,7 @@ const Sbtn = styled.div`
     margin: 3% auto 0 auto;
   }
   @media (min-width: 1024px) {
-    width: 40%;
+    width: 25%;
   }
 `;
 

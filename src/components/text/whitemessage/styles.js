@@ -6,7 +6,7 @@ const Paragraph = styled.p`
   font-weight: ${(props) => (props.peso ? "bold" : "300")};
   font-style: ${(props) => (props.styl ? props.styl : "normal")};
   /* font-size: ${(props) => (props.size ? props.size : "16px")}; */
-  font-size: max(2vw, 16px);
+  font-size: max(1.5rem, 15px);
   line-height: ${(props) => (props.height ? props.height : "20px")};
   text-align: center;
 `;
@@ -18,7 +18,7 @@ const Sa = styled.div`
     font-style: normal;
     font-weight: 300;
     /* font-size: 16px; */
-    font-size: max(2vw, 19px);
+    font-size: max(1.5rem, 15px);
     line-height: 20px;
     text-align: center;
     text-decoration: underline;

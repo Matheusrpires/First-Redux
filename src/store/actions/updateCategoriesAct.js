@@ -45,7 +45,6 @@ export const registerCategories = (data) => {
     token: sessionStorage.getItem("access_token"),
     data: data,
   };
-  console.log("PATLOAD DADA", payloadData);
   return async (dispatch) => {
     try {
       const userCategorie = await saveUserCategorie(payloadData);

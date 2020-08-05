@@ -11,15 +11,12 @@ export const loginApi = async (data) => {
     },
     body: JSON.stringify(payload),
   };
-  console.log(parameters);
   try {
     const response = await fetch(
       `https://strapi-redux.herokuapp.com/auth/local`,
       parameters
     );
-    console.log(response);
     let datas = await response.json();
-    console.log("console.log no api response", datas);
     return datas;
   } catch (error) {
     console.log(error);

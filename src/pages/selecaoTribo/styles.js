@@ -2,11 +2,8 @@ import styled from "styled-components";
 
 const Scontainer = styled.div`
   padding: 36% 5%;
-  /* backdrop-filter: blur(1px); */
-  /* background-color: rgba(255, 255, 255, 0.2); */
-  /* height: 100vw; */
   @media (min-width: 768px) {
-    padding: 17% 5%;
+    padding: 25vh 10%;
   }
 `;
 
@@ -42,9 +39,7 @@ const SArroyDiv = styled.div`
   }
   @media (min-width: 768px) {
     padding: 1%;
-    a {
-      /* padding: 50%; */
-    }
+    border-radius: 38px;
   }
 `;
 

@@ -2,7 +2,6 @@ import { actionTypes } from "../actions/authentication";
 import initialState from "./initialState";
 
 const authReducer = (state = initialState.auth, action) => {
-  console.log(action)
   switch (action.type) {
     case actionTypes.CHANGE:
       return {

@@ -43,7 +43,6 @@ const Pregister = (props) => {
   };
 
   const handlesChange = (name, user) => {
-    console.log(props.changesValue({ [name]: user }));
     props.changesValue({ [name]: user });
     setFormState({ ...formState, [name]: user });
     runValidate(name, user);
@@ -69,72 +68,72 @@ const Pregister = (props) => {
       <Notify />
       <SDiv>
         <SmallLogo />
-        <Sform
-          onSubmit={(e) => {
-            handleLogin(e);
-          }}
-        >
-          <Input
-            name="name"
-            label="Nome"
-            type="text"
-            placeholder="Nome"
-            func={handlesChange}
-            errors={result.getErrors("name")}
-          />
-          <Input
-            name="sobrenome"
-            label="Sobrenome"
-            type="text"
-            placeholder="Sobrenome"
-            func={handlesChange}
-            errors={result.getErrors("sobrenome")}
-          />
-          <Input
-            name="username"
-            label="Usuário"
-            type="text"
-            placeholder="Username"
-            func={handlesChange}
-            errors={result.getErrors("username")}
-          />
-          <Input
-            name="email"
-            label="Email"
-            type="text"
-            placeholder="Email"
-            func={handlesChange}
-            errors={result.getErrors("email")}
-          />
-          <Input
-            name="password"
-            label="Senha"
-            type="password"
-            placeholder="Senha"
-            func={handlesChange}
-            errors={result.getErrors("password")}
-          />
-          <Input
-            name="confirm_password"
-            label="Digite a senha novamente"
-            type="password"
-            placeholder="Senha"
-            func={handlesChange}
-            errors={result.getErrors("confirm_password")}
-          />
-          <SdivBtn>
-            <Mainbtn
-              disabled={result.hasErrors()}
-              statusBtn={setStatusBtn}
-              margin="true"
-              type="submit"
-              width="48"
-            >
-              Cadastrar
-            </Mainbtn>
-            {/* <Link to="">Voltar</Link> */}
-          </SdivBtn>
-        </Sform>
+          <Sform
+            onSubmit={(e) => {
+              handleLogin(e);
+            }}
+          >
+            <Input
+              name="name"
+              label="Nome"
+              type="text"
+              placeholder="Nome"
+              func={handlesChange}
+              errors={result.getErrors("name")}
+            />
+            <Input
+              name="sobrenome"
+              label="Sobrenome"
+              type="text"
+              placeholder="Sobrenome"
+              func={handlesChange}
+              errors={result.getErrors("sobrenome")}
+            />
+            <Input
+              name="username"
+              label="Usuário"
+              type="text"
+              placeholder="Username"
+              func={handlesChange}
+              errors={result.getErrors("username")}
+            />
+            <Input
+              name="email"
+              label="Email"
+              type="text"
+              placeholder="Email"
+              func={handlesChange}
+              errors={result.getErrors("email")}
+            />
+            <Input
+              name="password"
+              label="Senha"
+              type="password"
+              placeholder="Senha"
+              func={handlesChange}
+              errors={result.getErrors("password")}
+            />
+            <Input
+              name="confirm_password"
+              label="Digite a senha novamente"
+              type="password"
+              placeholder="Senha"
+              func={handlesChange}
+              errors={result.getErrors("confirm_password")}
+            />
+            <SdivBtn>
+              <Mainbtn
+                disabled={result.hasErrors()}
+                statusBtn={setStatusBtn}
+                margin="true"
+                type="submit"
+                width="48"
+              >
+                Cadastrar
+              </Mainbtn>
+              {/* <Link to="">Voltar</Link> */}
+            </SdivBtn>
+          </Sform>
       </SDiv>
       <Sfooter>
         <WhiteMessage action="Faça login" to="">

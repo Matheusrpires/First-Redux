@@ -45,7 +45,6 @@ export const registerUser = (data) => {
       //     message: "Usuário cadastrador com sucesso",
       //   })
       // );
-      console.log("log no action register resposta api", userResponse);
       dispatch(setUserToken(userResponse.jwt));
       const userNameId = {
         id: userResponse.user.id,

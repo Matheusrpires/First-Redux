@@ -47,11 +47,9 @@ const LoginP = (props) => {
   };
 
   const login = async () => {
-    console.log("teste");
     const { credentials } = props;
     try {
       const log = await props.loginUser(credentials);
-      console.log("log no login react", log);
       if (log.jwt) {
         setRedi(true);
       }

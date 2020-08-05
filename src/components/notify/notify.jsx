@@ -9,7 +9,6 @@ const Notify = (props) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       handleClose();
-      console.log('notify', timer)
     }, 2000);
     return () => clearTimeout(timer);
   }, [props.notify.open]);

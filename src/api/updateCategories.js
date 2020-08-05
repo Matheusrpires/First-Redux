@@ -7,15 +7,12 @@ export const saveUserCategorie = async (data) => {
     },
     body: JSON.stringify(data.data),
   };
-  console.log("Console.log na api categories nos parameters", parameters);
   try {
     const response = await fetch(
       "https://strapi-redux.herokuapp.com/usercategoris",
       parameters
     );
-    console.log("console.log na api register response api", response);
     let data = await response.json();
-    console.log("console.log na api register data dps api", data);
     return data;
   } catch (error) {
     return error;
@@ -24,7 +21,6 @@ export const saveUserCategorie = async (data) => {
 
 export const getApiCategories = async (data) => {
   try {
-    // const apiCategories = await fetch("http://localhost:1337/lists");
     const apiCategories = await fetch("https://strapi-redux.herokuapp.com/lists");
     const defaultCategories = await apiCategories.json();
     return defaultCategories[0].categories;

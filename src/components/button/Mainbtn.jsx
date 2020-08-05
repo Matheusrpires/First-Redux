@@ -22,7 +22,6 @@ const Mainbtn = ({ children, type, width, margin, disabled, statusBtn }) => {
     letter-spacing: 2px;
     text-transform: uppercase;
   `;
-  console.log(disabled)
   disabled && statusBtn(disabled);
   return (
     <>
