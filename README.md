@@ -1,10 +1,29 @@
-# Primeiro app com Redux (Em Desenvolvimento)
+## Primeiro app com Redux (Em Desenvolvimento)
 
+```
 Aplicação responsiva.
+
+Esse foi meu primeiro projeto utilizando redux para gerenciamento de states no ReactJs e redux thunk para requisições de api.
 
 Projeto com login e cadastro de usuário.
 
+Link para deploy no Heroku: [Aplicação](https://redux-first-app.herokuapp.com/)
 Backend para cadastro está em outro repo e foi feito com [Strapi](https://strapi-redux.herokuapp.com/).
+```
+
+## Uso
+
+### `yarn install`
+
+```
+Instala todas as dependências da aplicação.
+```
+
+### `yarn start`
+
+```
+Inicia a aplicação no localhost:8080.
+```
 
 ## Prints da Aplicação
 
@@ -17,11 +36,3 @@ Backend para cadastro está em outro repo e foi feito com [Strapi](https://strap
 ![Loading](./Readmepics/loading.png)
 ![user](./Readmepics/user.png)
 ![userMenu](./Readmepics/userMenu.png)
- 
-### `yarn start`
-
-Inicia a aplicação no localhost:3000.
-
-<!-- **Note: this is a one-way operation. Once you `eject`, you can’t go back!** -->
-
-<!-- You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started). -->
